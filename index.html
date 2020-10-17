@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Library</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+     <div class="Title">Library</div>
+     <div class = "Library">
+          <div class="Book">
+              <img id="book-img" src="Book.jpg">
+              <div id="details">
+              <h2>Galvin</h2>
+              <h3>Database</h3>
+              <h3>240</h4>
+              <h3>Read</h3>
+            </div>
+          </div>
+          <div class="Book"></div>
+          <div class="Book-add">
+            <form id = "LibBook",action="javascript">
+                <label for="author">Author name:</label><br>
+                <input type="text" id="author" name="author" value=""><br>
+                <label for="category">Category:</label><br>
+                <input type="text" id="category" name="category" value=""><br>
+                <label for="pages">Pages:</label><br>
+                <input type="text" id="pages" name="pages" value=""><br>
+                <label for="Status">Status:</label><br>
+                <input type="text" id="status" name="status" value=""><br><br>
+                <input id="submit-book" type="submit" value="Submit" onclick="return validateForm();">
+              </form> 
+          </div>
+     </div>
+     <script src="library.js"></script>
+    </body>
+</html>
