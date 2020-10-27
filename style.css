@@ -1,7 +1,18 @@
 html,body{
     padding:0;
     margin:0;
-    background: orange;
+    background:rgb(224, 184, 108);
+}
+.add-book{
+    border:1px solid blue;
+}
+.Title{
+    text-align: center;
+    color:olivedrab;
+    font-size: 6em;
+    border:1px solid red;
+    background: linear-gradient(45deg,rgb(229, 97, 97),rgb(95, 95, 233));
+    
 }
 .library{
     height:700px;
@@ -11,6 +22,7 @@ html,body{
     display:flex;
     flex-wrap:wrap;
     justify-content: space-around;
+    
 }
 .Book,.Book-add,.book
 { 

@@ -1,7 +1,12 @@
 let myLib = []
 
 const Library = document.querySelector(".Library");
+const remBook = document.querySelector("#remove");
+const addBook = document.querySelector('#add-book');
 
+addBook.addEventListener('click',validateForm());
+
+remBook.addEventListener("click",(e)=>removeBook(e));
 
 
 function Book(author,title,pages,status)
@@ -33,6 +38,11 @@ function insertBook(author,category,pages,status)
 
     Library.appendChild(book);
 }
+function removeBook(e)
+{
+   console.log(e);
+}
+
 function validateForm()
 {
    var author = document.querySelector("#author").value;
@@ -49,9 +59,6 @@ function validateForm()
         console.log(pages);
         console.log(status);
    }
-   
-   
-
    return false;
 }
 
