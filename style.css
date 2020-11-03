@@ -3,6 +3,14 @@ html,body{
     margin:0;
     background:rgb(224, 184, 108);
 }
+.LibBook
+{
+    visibility: hidden;
+    margin-top: 20px;
+    margin-left: -100px;
+    padding:10px;
+    background: whitesmoke;
+}
 .add-book{
     border:1px solid blue;
 }
@@ -17,11 +25,11 @@ html,body{
 .library{
     height:700px;
     width:1400px;
-    margin:200px 100px 100px 100px;
+    margin:0px 100px 100px 100px;
     border:1px solid red;
     display:flex;
     flex-wrap:wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     
 }
 .Book,.Book-add,.book
@@ -60,4 +68,13 @@ img{
 }
 h2,h3{
     margin:5px;
+}
+.add-book{
+    border:1px solid blue;
+}
+.wrapper{
+    border:1px solid blue;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }

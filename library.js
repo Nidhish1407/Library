@@ -1,24 +1,28 @@
 let myLib = []
-
+const form = document.querySelector(".LibBook");
 const Library = document.querySelector(".Library");
 const remBook = document.querySelector("#remove");
-const addBook = document.querySelector('#add-book');
+const addBook = document.querySelector('.add-book');
+const closeForm = document.querySelector("#close");
+const add = document.querySelector('#add');
 
-addBook.addEventListener('click',validateForm());
+add.addEventListener("click",validateForm);
+addBook.addEventListener('click',()=>form.style.visibility = 'visible');
+closeForm.addEventListener('click',()=>form.style.visibility = 'hidden');
 
-remBook.addEventListener("click",(e)=>removeBook(e));
+
 
 
 function Book(author,title,pages,status)
 {
-    return {
-        author,
-        title,
-        pages,
-        status,
-    }
+        this.author=author,
+        this.title=title,
+        this.pages=pages,
+        this.status = status
 }
-
+Book.prototype.changeStatus = function(){
+    (this.status = read)
+}
 function addBooktoLibrary(author,category,pages,status)
 {
    var book = Book(author,category,pages,status);
@@ -49,7 +53,7 @@ function validateForm()
    var category = document.querySelector("#category").value;
    var pages = document.querySelector("#pages").value;
    var status = document.querySelector("#status").value;
-   if(author == "" || category == "" || pages == "" || status=="")
+   if(author == "" || category == "" || pages == "")
    alert("Invalid Submission!");
    else 
    {
