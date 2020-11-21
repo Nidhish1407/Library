@@ -1,80 +1,120 @@
 html,body{
     padding:0;
     margin:0;
-    background:rgb(224, 184, 108);
+    background-color: antiquewhite;
 }
-.LibBook
-{
-    visibility: hidden;
-    margin-top: 20px;
-    margin-left: -100px;
-    padding:10px;
-    background: whitesmoke;
-}
-.add-book{
-    border:1px solid blue;
-}
-.Title{
-    text-align: center;
-    color:olivedrab;
+.header{
+    height:150px;
+    background: linear-gradient(45deg,orange,brown);
     font-size: 6em;
-    border:1px solid red;
-    background: linear-gradient(45deg,rgb(229, 97, 97),rgb(95, 95, 233));
-    
-}
-.library{
-    height:700px;
-    width:1400px;
-    margin:0px 100px 100px 100px;
-    border:1px solid red;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: flex-start;
-    
-}
-.Book,.Book-add,.book
-{ 
-    height:400px;
-    width:300px;
-    border:1px solid blue; 
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    margin:5px;
-    z-index:1;
-    
-}
-.Book-add{
+    color:white;
+    text-align: center;
     display:flex;
     justify-content: center;
     align-items: center;
-    /* margin-left: 40px; */
-    border:1px solid red; 
-}
-.Book:hover{
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
-img{
-    position:absolute;
-    align-self: center;
-    height:380px;
-    width:280px;
-    z-index: -1;
-}
-#details{
-    align-self: center;
-    margin-top: 230px;
-}
-h2,h3{
-    margin:5px;
-}
-.add-book{
-    border:1px solid blue;
+    text-shadow: 1px 3px 4px #000;
 }
 .wrapper{
-    border:1px solid blue;
+    background-color: antiquewhite;
     display:flex;
-    align-items: center;
+    flex-direction:column;
     justify-content: center;
+    align-items: center;
+} 
+
+.add-book{
+    background-color: blueviolet;
+    color: aliceblue;
+    font-size: 1em;
+    box-shadow: inset -1px -1px 3px 3px rgb(127, 73, 212);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height:40px;
+    width:80px;
+    border-color:blueviolet;
+    border-image: none;
+    border-radius: 3px;
+}
+.add-book:hover{
+    text-shadow: 1px 1px 2px rgb(98, 93, 93);
+}
+.add-book:focus{
+    outline: none;
+}
+
+.form{
+    /* border:1px solid blue; */
+    width:200px;
+    height:50px; 
+    position:relative;
+    overflow: hidden;
+    
+}
+.form input{
+    background-color: antiquewhite;
+    width:100%; 
+    height:100%;
+    color:rgb(7, 7, 185);
+    padding-top: 20px;
+    border:none; 
+    outline:none;
+    border-bottom: 1px solid black;
+    
+}
+
+}
+.form label{
+    position:absolute;
+    bottom:0px;
+    left:0%;
+    width:100%;
+    height:100%;
+    pointer-events: none;
+    border-bottom:1px solid rgb(27, 109, 231); 
+}
+
+.form label::after{
+    content:"";
+    position:absolute;
+    left:0px;
+    bottom:-1px;
+    height:100%;
+    width:100%;
+    border-bottom:3px solid rgb(61, 133, 221);
+    transform:translateX(-100%);
+    transition:transform 0.3s ease;
+}
+
+.content-name{
+    position:absolute;
+    bottom:5px;
+    left:0px;
+    transition:all 0.3s ease;
+}
+
+/* + affect any thing below selector */
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name{
+  color:rgb(61, 133, 221);
+  font-size: 14px;
+  transform: translateY(-20px);
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after
+{
+    transform: translateX(0%);
+}
+
+.books{
+    display:flex;
+    justify-content: flex-start;
+    width:100vw;
+    border:1px solid red;
+}
+.card{
+    height:300px;
+    width:200px;
+    margin:10px;
+    border:1px solid blue;
 }
