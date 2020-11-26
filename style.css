@@ -3,7 +3,7 @@ html,body{
     margin:0;
     background-color: antiquewhite;
 }
-.header{
+.title{
     height:150px;
     background: linear-gradient(45deg,orange,brown);
     font-size: 6em;
@@ -41,9 +41,10 @@ html,body{
 .add-book:focus{
     outline: none;
 }
-
+.form-container{
+    visibility:hidden;
+}
 .form{
-    /* border:1px solid blue; */
     width:200px;
     height:50px; 
     position:relative;
@@ -106,15 +107,48 @@ html,body{
     transform: translateX(0%);
 }
 
-.books{
+.library{
     display:flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     width:100vw;
     border:1px solid red;
 }
 .card{
-    height:300px;
-    width:200px;
-    margin:10px;
+    height:280px;
+    width:250px;
+    margin:20px;
     border:1px solid blue;
+    border-radius: 10px;
+    
+}
+
+.remove{
+    position:relative;
+    left:8px;
+    top:8px;
+    background-color: red;
+    color:white;
+    border-radius:5px;
+}
+.header{
+    text-align: center;
+    font-size: 2em;
+}
+p{
+    text-align: center;
+}
+
+.status-btn{
+    height:40px;
+    width:100px;
+    margin-left:70px;
+    border-radius:4px;
+}
+
+.read{
+    background-color: green;
+}
+.not-read{
+    background-color: red;
 }
