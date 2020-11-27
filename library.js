@@ -13,7 +13,7 @@ addBtn.addEventListener('click',()=>{
     else form.style.visibility = 'hidden';
 })
 clear.addEventListener('click',()=>form.reset());
-add.addEventListener('click',()=> addBook());
+add.addEventListener('click',()=> checkFields());
 
 let myBooks = [];
 
@@ -27,10 +27,21 @@ function Book()
 Book.prototype.changeStatus = function(){
     (this.status == 'read')?(this.status = 'not read'):(this.status = 'read');
 }
+function checkFields()
+{
+    if(form.title.value == '' || form.author.value == '' || form.pages.value == '')
+    alert('Fill all fields.');
+    else 
+    addBook();
+}
 
 function addBook()
 {
     console.log('click');
+    
+    if(form.title.value == '' || form.author.value == '' || form.pages.value == '')
+    alert('Fill all fields.')
+
     let book = new Book();
     myBooks.push(book);
     refreshLibrary();

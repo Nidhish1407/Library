@@ -62,7 +62,7 @@ html,body{
     
 }
 
-}
+
 .form label{
     position:absolute;
     bottom:0px;
@@ -140,7 +140,8 @@ p{
     text-align: center;
 }
 
-.status-btn{
+.status-btn
+{
     height:30px;
     width:100px;
     margin-left:60px;
